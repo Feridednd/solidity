@@ -1,5 +1,6 @@
 (function(source, uncompressedSize) {
-	function base64DecToArr (sB64Enc) {
+	var base64DecToArr = (Buffer !== undefined && typeof Buffer.from === "function") ?
+	function (sB64Enc) { return Buffer.from(sB64Enc, 'base64'); } : function (sB64Enc) {
 		/*\
 		|*|
 		|*|  Base64 / binary data / UTF-8 strings utilities (#1)
@@ -39,7 +40,6 @@
 				nUint24 = 0;
 			}
 		}
-
 		return aBytes;
 	}
 	function lz4Decompress (src, dst) {
