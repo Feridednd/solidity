@@ -636,7 +636,7 @@ BOOST_AUTO_TEST_CASE(dev_return_no_params)
 	{
 		"methods": {
 			"mul(uint256,uint256)": {
-				"returns": { "d": "The result of the multiplication"
+				"returns": { "d": "The result of the multiplication" }
 			}
 		}
 	})ABCDEF";
